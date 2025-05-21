@@ -1,0 +1,1 @@
+So, I could solve most of the questions by atching the series of STL of Luv Gupta. I understood the concept of dp through chatgpt and then i could easily solve the dp prob. The rest prob are giving me TLE so I am trying to figure out.
