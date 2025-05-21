@@ -17,10 +17,10 @@ int NthRoot(int n, int m) {
    long long first= 1LL; long long last= m; 
    long long k; long long mid; long long temp;
    while(first<=last){
-    mid= (first +last)/2;
-     k= nth(n,mid,m);
+    mid= (first +last)/2;  // used binary search to access the range in which the root lies
+     k= nth(n,mid,m);                 // the function is multiplying the mid element n times 
         if(k==m){
-            temp= mid;
+            temp= mid;      
             return temp;
             break;
         }
