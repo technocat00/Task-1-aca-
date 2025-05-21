@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+    //    set<int> maxsum;
+    // i used dp to make it efficient(i tried it by using loops but obv there was TLE)
+       int n= nums.size();
+       int current= nums[0]; 
+       int maxsum= nums[0]; 
+       for(int i=1; i<n; i++){
+       current= max(current+nums[i], nums[i]); //if starting element + the next is greater than the starting
+       maxsum= max(maxsum, current); // checking overall sum
+       }
+        return maxsum;
+    }
+};
+
+link- https://leetcode.com/problems/maximum-subarray/submissions/1639909505
