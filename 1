@@ -1,0 +1,18 @@
+https://leetcode.com/problems/majority-element/submissions/1638005147
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+      unordered_map <int, int> freq;
+      int n= nums.size(); int k;
+      for(int i=0; i<n; i++){
+        freq[nums[i]]++;
+      }
+      for(auto max: freq){
+        if(max.second > n/2){
+            k= max.first;
+        }
+      }
+      return k;
+    }
+};
