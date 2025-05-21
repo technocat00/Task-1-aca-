@@ -1,0 +1,35 @@
+long long nth(int n, int mid, int m){
+    long long ans = mid;
+   for(int i=1; i<n; i++){
+        ans=ans*mid;
+        if(ans>m*1LL){
+            break;
+        }
+   }
+   return ans;
+}
+int NthRoot(int n, int m) {
+  // Write your code here.
+  if(m==0) return 0;
+  if(m==1) return 1;
+  if(n==1) return m;
+  if(m==0) return -1;
+   long long first= 1LL; long long last= m; 
+   long long k; long long mid; long long temp;
+   while(first<=last){
+    mid= (first +last)/2;
+     k= nth(n,mid,m);
+        if(k==m){
+            temp= mid;
+            return temp;
+            break;
+        }
+        else if(k > m){
+            last= mid-1;
+        }
+        else{
+            first=mid+1;
+        }
+   }
+   return -1;
+}
